@@ -1,0 +1,62 @@
+<!--Main Navigation-->
+<header>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <a class="navbar-brand" href="#"><strong>Demo API REST</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link" href="#">Link</a> -->
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link" href="#">Profile</a> -->
+                </li>
+            </ul>
+        </div>
+        <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/cmurestudillos"><i class="fab fa-github"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/carlos-a-mur-estudillos-89671346"><i class="fab fa-linkedin"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="view intro-2">
+        <div class="full-bg-img">
+            <div class="mask rgba-purple-light flex-center">
+                <div class="container text-center white-text wow fadeInUp">
+                    <div class="card" *ngFor="let user of users">
+                        <div class="details">
+                            <img class="user_photo horizontal_center" [src]="user.picture.large" alt="Card image cap">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="row" id="iconos">
+                                        <div class="col-sm-3 indigo-text">
+                                            <i class="fas fa-user fa-4x"></i> <br><strong>Nombre: </strong> {{ user.name.first }} {{ user.name.last}}
+                                        </div>
+                                        <div class="col-sm-4 indigo-text">
+                                            <i class="far fa-envelope fa-4x"></i> <br>{{ user.email }}
+                                        </div>
+                                        <div class="col-sm-3 indigo-text">
+                                            <i class="far fa-calendar-check fa-4x"></i> <br> <strong>Edad: </strong>{{ user.dob.age }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!--Main Navigation-->
